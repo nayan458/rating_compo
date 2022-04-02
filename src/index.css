@@ -1,0 +1,196 @@
+:root{
+    /* Primery colors */
+    --Orange: hsl(25, 97%, 53%);
+
+    /* natural-color */
+
+    --White: hsl(0, 0%, 100%);
+    --Light_Grey: hsl(217, 12%, 63%);
+    --Medium_Grey: hsl(216, 12%, 54%);
+    --Dark_Blue: hsl(215, 21%, 16%);
+    --Very_Dark_Blue: hsl(216, 12%, 8%);
+
+    --fade_drk_blue: hsl(208, 18%, 21%);
+
+    /* views */
+    --Mobile: 375px;
+    --Desktop: 1440px;
+
+    /* Font */
+    /* - Weights: 400, 700 */
+}
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    background-color: var(--Very_Dark_Blue);
+    font-family: 'Overpass', sans-serif;
+    color: var(--Medium_Grey);
+    font-weight: 400;
+    font-size: 65%;
+}
+
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+/* desktop */
+
+
+.star{
+    background-color: var(--fade_drk_blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.head{
+    color: var(--White);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+/* grid of main container */
+.star { grid-area: star;}
+.head {grid-area: head;}
+.info {grid-area: info;}
+.optional_buttons_group {grid-area: num;}
+.submit {grid-area: submit;}
+
+.main_container{
+    background-color: var(--Dark_Blue);
+    padding: 25px;
+    border-radius: 7%;
+    display : grid;
+    grid-template-areas: 
+        'star star star star star'
+        'head head head head head'
+        'info info info info info'
+        'num num num num num'
+        'submit submit submit submit submit'
+    ;
+    gap: 25px;
+}
+/* END OF GRID */
+
+/* flex of numbers */
+
+.optional_buttons_group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.optional_button{
+    background-color: var(--fade_drk_blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.optional_button:hover{
+    background-color: var(--Light_Grey);
+    color: var(--White);
+    transition: .5s ease;
+}
+
+.submit{
+    display: flex;
+    background-color: var(--Orange);
+    color: var(--White);
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 80px;
+    border: none;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: none;
+}
+.submit:hover{
+    transition: .4s ease;
+    background-color: var(--White);
+    color: var(--Orange);
+}
+
+.active_btn{
+    color: var(--White);
+    background-color: var(--Orange);
+}
+
+.active_btn:hover{
+    color: var(--White);
+    background-color: var(--Orange);
+    transition: .4s ease;
+}
+
+
+/* This is by front-end mentor */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* /////////////////////    second page     ////////////////////////// */
+
+/* grid for result purpose */
+.thank_ill{grid-area: tnk;}
+.rslt {grid-area: rslt;}
+.head {grid-area: head;}
+.info  {grid-area: info;}
+
+.main_container2{
+    display: grid;
+    text-align: center;
+    grid-template-areas: 'tnk'
+                         'rslt'
+                         'head'
+                         'info';
+    gap: 25px;
+    background-color: var(--Dark_Blue);
+    padding: 25px;
+    border-radius: 7%;
+}
+/* END  OF GRID*/
+
+.rslt{
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+#selected_rslt{
+    background-color: var(--fade_drk_blue);
+    padding: 5px 20px;
+    color: var(--Orange);
+    border-radius: 30px;
+    border: none;
+}
+
+/* media query for responsiveness */
+
+@media (max-width : 440px) {
+    html{
+        font-size: 57%;
+    }
+}
+
+@media (max-width : 350px) {
+    html{
+        font-size: 54%;
+    }
+    
+}
