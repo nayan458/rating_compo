@@ -41,8 +41,8 @@ See the "Thank you" card state after submitting a rating
 
 ### Links
 
-- Solution or code URL: (https://github.com/nayan458/Interactive_rating_component)
-- Live Site URL: (https://nayan458.github.io/Interactive_rating_component/)
+- Solution or code URL: (https://github.com/nayan458/rating_compo)
+- Live Site URL: (https://nayan458.github.io/rating_compo/)
 
 ## My process
 First : designed the layout for desktop using html and css(grid and flex mainly)
